@@ -16,12 +16,12 @@
 
   <% trail.forEach(element => { %>
     <% element.content.forEach(subelement => { %>
-      <h1><%= subelement.review %> </h1>
-      <h1><%= subelement.rating %> </h1>
+      <p><%= subelement.review %> <%= subelement.rating %> </p> <a href="/trails/<%= element._id %> ">details</a>
+      
     <% }) %> 
   <% }) %>
 
-  <h1>hellllllo</h1>
+
 </main>
 
 

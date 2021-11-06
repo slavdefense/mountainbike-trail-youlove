@@ -35,6 +35,17 @@ function createTrail(req,res){
 
 
 }
+function show(req,res){
+  Trail.findById(req.params.id)
+
+  .then((trail)=>{
+    console.log(trail.content)
+    res.render('trails/show',{trail,user:req.user,title:'Your trail'})
+  })
+  .catch((err)=>console.log(err))
+  
+
+}
 
 
 
@@ -45,6 +56,7 @@ function createTrail(req,res){
 export{
   index,
   newTrail as new,
-  createTrail as create
+  createTrail as create,
+  show
 
 }

@@ -12,6 +12,9 @@ router.get('/new',trailCtrl.new)
 //creat a new trail @ localhost:3000/trails
 router.post('/',trailCtrl.create)
 
+//read a specific trail @localhose:3000/trails/:id
+router.get('/:id',trailCtrl.show)
+
 export {
   router
 }
