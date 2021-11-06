@@ -9,15 +9,17 @@
     <%# I included an image to start. The image is on the css file %> 
   </div>
   <%# This is my comment box %> 
-  <label for="comments">Comment</label>
+  <label for="review">Comment</label>
     <input type="text" name ="comments">
   <%# This is a link to attach a new picture and comments %> 
    <a href="/trails/new">Create a new trail</a>
 
-   <% trail.forEach(element => { %>
-    <h1><%= element.content %> </h1>
-   <% }) %>
- 
+  <% trail.forEach(element => { %>
+    <% element.content.forEach(subelement => { %>
+      <h1><%= subelement.review %> </h1>
+      <h1><%= subelement.rating %> </h1>
+    <% }) %> 
+  <% }) %>
 
   <h1>hellllllo</h1>
 </main>
