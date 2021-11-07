@@ -70,11 +70,21 @@ Trail.findById(req.params.id)
   res.redirect('/trails')
 })
 
-
-
-  
 }
+function deleteTrails(req,res){
+  // Trail.findById(req.params.id)
+  // .then((data)=>{
+  //    delete data.content[0].review
+  //    delete data.content[0].rating
+  //   console.log(req.params.id)
+  //   data.save()
+  //   res.redirect('/trails')
+  // })
+  Trail.findByIdAndDelete(req.params.id)
+  .then(()=> res.redirect('/trails'))
+  
 
+}
 
 
 
@@ -84,6 +94,7 @@ export{
   createTrail as create,
   show,
   edit,
-  fix as update
+  fix as update,
+  deleteTrails as delete
 
 }

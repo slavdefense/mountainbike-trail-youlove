@@ -12,7 +12,9 @@
 <% }) %>
 <h1><%= trail._id %> </h1>
 <h1>edit the trail<a href="/trails/<%= trail._id %>/edit">edit</a> </h1>
-
+<form action="/trails/<%= trail._id %>?_method=DELETE" method="POST">
+  <button method="post">Delete</button>
+</form>
 </main>
 
 

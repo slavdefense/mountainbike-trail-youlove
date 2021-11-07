@@ -21,7 +21,8 @@ router.get('/:id/edit',trailCtrl.edit)
 //put/patch a edit request @ localhost:3000/trails/:id
 router.patch('/:id',trailCtrl.update)
 
-
+//delete a trail @localhost:3000/trails/:id
+router.delete('/:id',trailCtrl.delete)
 export {
   router
 }
