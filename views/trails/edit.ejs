@@ -1,9 +1,15 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
 
+
+
 <main>
+
+  <h1><%= user.email %> </h1>
   <h1><%= title %> </h1>
 <h1><%= id %> </h1>
+
+<%-  %> 
  
 <form action="/trails/<%= id %>?_method=PATCH" method="POST">
   <label for="review">Comments</label>
