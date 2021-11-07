@@ -1,0 +1,23 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<main>
+  <h1><%= title %> </h1>
+<h1><%= id %> </h1>
+ 
+<form action="/trails/<%= id %>?_method=PATCH" method="POST">
+  <label for="review">Comments</label>
+<textarea name="review" id="" cols="30" rows="10" required></textarea>
+<input type="number" name="rating">
+
+
+<button type="submit">Submit</button>
+</form>
+</main>
+
+
+
+
+
+
+<%- include('../partials/footer') %>
