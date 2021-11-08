@@ -1,5 +1,6 @@
 import { Router } from 'express'
 import * as trailCtrl from '../controllers/trails.js'
+import { isLoggedIn } from '../middleware/middleware.js'
 
 const router = Router()
 
@@ -7,7 +8,7 @@ const router = Router()
 router.get('/',trailCtrl.index)
 
 //render a new trail page @ localhost:3000/trails/new
-router.get('/new',trailCtrl.new)
+router.get('/new',isLoggedIn,trailCtrl.new)
 
 //creat a new trail @ localhost:3000/trails
 router.post('/',trailCtrl.create)
@@ -22,7 +23,16 @@ router.get('/:id/edit',trailCtrl.edit)
 router.patch('/:id',trailCtrl.update)
 
 //delete a trail @localhost:3000/trails/:id
-router.delete('/:id',trailCtrl.delete)
+router.delete('/:id',isLoggedIn,trailCtrl.delete)
+
+
+
+
+
+
+
+
+
 export {
   router
 }

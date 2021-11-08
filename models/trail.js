@@ -9,7 +9,7 @@ const trailSchema = new mongoose.Schema({
   name: String,
   content: [contentSchema],
   place:String,
-  profile: {type: mongoose.Schema.Types.ObjectId,ref: "Profile"}
+  boss: {type: mongoose.Schema.Types.ObjectId,ref: "Profile"}
   
 }, {
   timestamps: true

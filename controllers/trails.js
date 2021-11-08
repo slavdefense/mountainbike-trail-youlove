@@ -1,14 +1,15 @@
+import { request } from 'express'
+
 import {Trail} from '../models/trail.js'
 
 
 function index(req,res){
   Trail.find({})
-  // .populate('profile')
+  
   .then((trail)=>{
-
-    res.render('trails/index',{trail,title:'All Trails',user:req.user})
-    // console.log(trail[0].content[0].review)
     
+    res.render('trails/index',{trail,title:'All Trails',user:req.user})
+    // console.log(trail[0].content[0].review) 
   }
   )
     .catch((err)=> console.log(err))
@@ -17,35 +18,36 @@ function index(req,res){
 
 
 function newTrail(req,res){
+   
+  // console.log(req.body.owner)
+
   res.render('trails/new',{title:'Add a trail',user:req.user})
 }
 
 function createTrail(req,res){
   //collect form data and put in inside Trail->content
-
   const trail = new Trail()
-  trail.content=req.body
+  trail.boss = req.user.profile._id
+  console.log(trail.boss)
   
+  // console.log(req.body.owner)
+  trail.content=req.body
   // console.log(trail.content) 
   trail.save()
-
   .then(()=>res.redirect('/trails'))
-
   // console.log(req.body)
 
-
-
 }
-function show(req,res){
-  Trail.findById(req.params.id)
 
+function show(req,res){
+  // console.log(req.user.profile.name)
+  Trail.findById(req.params.id)
+  .populate('boss')
   .then((trail)=>{
-    // console.log(trail.content)
-    res.render('trails/show',{trail,user:req.user,title:'Your trail'})
+   console.log(trail)
+   res.render('trails/show',{trail,title:'Your trail'})
   })
   .catch((err)=>console.log(err))
-  
-
 }
 
 function edit(req,res){
@@ -80,6 +82,7 @@ function deleteTrails(req,res){
   //   data.save()
   //   res.redirect('/trails')
   // })
+  // console.log(isLoggedIn)
   Trail.findByIdAndDelete(req.params.id)
   .then(()=> res.redirect('/trails'))
   
