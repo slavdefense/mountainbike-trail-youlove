@@ -51,8 +51,23 @@ function show(req,res){
 }
 
 function edit(req,res){
-  console.log(`edit id:${req.params.id}`)
-  res.render('trails/edit',{id:req.params.id,title:'Trail Edit',user:req.user})
+  
+  Trail.findById(req.params.id)
+  .then((trail)=>{
+    console.log(trail.boss)
+    console.log(req.user.profile._id)
+    if(trail.boss.equals(req.user.profile._id)){
+      res.render('trails/edit',{id:req.params.id,title:'Trail Edit',user:req.user})
+    }
+    else{
+      res.redirect('/trails')
+      console.log('cannot edit others trail')
+    }
+    
+  })
+  
+  // console.log(`edit id:${req.params.id}`)
+  // res.render('trails/edit',{id:req.params.id,title:'Trail Edit',user:req.user})
 
 }
 
@@ -65,15 +80,40 @@ function fix(req,res){
 //  .then(()=> res.redirect('/trails'))
 // Trail.findById("6186ffecdaccd9312f9f0481")
 // .then((data)=> console.log(data.content[0].review,req.params.id))
+
 Trail.findById(req.params.id)
+
 .then(data=>{
+  
   data.content[0]=req.body
   data.save()
   res.redirect('/trails')
 })
 
 }
+
+
 function deleteTrails(req,res){
+
+  Trail.findById(req.params.id)
+  .then((trail)=>{
+    if(trail.boss.equals(req.user.profile._id)){
+      Trail.findByIdAndDelete(req.params.id)
+      .then((data)=>res.redirect('/trails'))
+      .catch((err)=>{
+        res.redirect('/trails')
+        console.log(err)
+      })
+
+    }
+    else{
+      res.redirect('/trails')
+      console.log('You do not have authorization')
+    }
+  })
+
+
+}
   // Trail.findById(req.params.id)
   // .then((data)=>{
   //    delete data.content[0].review
@@ -83,11 +123,11 @@ function deleteTrails(req,res){
   //   res.redirect('/trails')
   // })
   // console.log(isLoggedIn)
-  Trail.findByIdAndDelete(req.params.id)
-  .then(()=> res.redirect('/trails'))
+//   Trail.findByIdAndDelete(req.params.id)
+//   .then(()=> res.redirect('/trails'))
   
 
-}
+// }
 
 
 

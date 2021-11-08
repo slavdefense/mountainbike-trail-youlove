@@ -17,7 +17,7 @@ router.post('/',trailCtrl.create)
 router.get('/:id',trailCtrl.show)
 
 //edit a specific trail @localhost:3000/trails/:id/edit
-router.get('/:id/edit',trailCtrl.edit)
+router.get('/:id/edit',isLoggedIn,trailCtrl.edit)
 
 //put/patch a edit request @ localhost:3000/trails/:id
 router.patch('/:id',trailCtrl.update)
