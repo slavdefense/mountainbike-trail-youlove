@@ -2,24 +2,39 @@
 <%- include('../partials/nav') %>
 
 
-<main>
-  <h1>This is my index trail page Where I show all my mountain bike trails</h1>
+<main class="container">
+ 
 <%# all my created trails goes here %> 
-  <div id="trail-1">
-    <%# I included an image to start. The image is on the css file %> 
-  </div>
+  
   <%# This is my comment box %> 
-  <label for="review">Comment</label>
-    <input type="text" name ="comments">
+ 
   <%# This is a link to attach a new picture and comments %> 
-   <a href="/trails/new">Create a new trail</a>
+   <!-- <a href="/trails/new">Create a new trail</a> -->
+<div id="display-trails-index">
 
-  <% trail.forEach(element => { %>
-    <% element.content.forEach(subelement => { %>
-      <p><%= subelement.review %> <%= subelement.rating %> </p> <a href="/trails/<%= element._id %> ">details</a>
-      
-    <% }) %> 
-  <% }) %>
+
+  
+
+    <% trail.forEach(element => { %>
+      <% element.content.forEach(subelement => { %>
+        <div id="trails-individual">
+          <p><%= subelement.review %> <%= subelement.rating %> </p> <a href="/trails/<%= element._id %> ">details</a>
+        </div>
+        
+        
+      <% }) %> 
+    <% }) %>
+  
+
+  
+
+  
+
+  
+
+
+</div>
+  
 
 
 </main>

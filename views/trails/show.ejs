@@ -2,8 +2,11 @@
 <%- include('../partials/nav') %>
 
 
-<main>
+<main class="container">
  <h1><%= title %></h1>  
+
+ <h1>Trail Title:<%= trail.name %> </h1>
+ <h2>Trail place:<%= trail.place %> </h1>
 <% trail.content.forEach(info => { %>
  <h1><%= info.review %> </h1>
  <h1><%= info.rating %> </h1>
@@ -13,6 +16,7 @@
 
 
   <h1>The creater is <%= trail.boss.name %> </h1>
+  
 
 <h1>trail id <%= trail._id %> </h1>
 <h1>edit the trail<a href="/trails/<%= trail._id %>/edit">edit</a> </h1>

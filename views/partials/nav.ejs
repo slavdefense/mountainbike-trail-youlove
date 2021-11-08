@@ -3,16 +3,32 @@
   <% } %>
 </head>
 <body>
-  <nav>
-    <% if (user) { %>
-      <a href="/auth/logout">
-        <button type="submit">Logout</button>
-      </a>
-    <% } else { %>
-      <a href="/auth/google" class="siwg-link">
-        <button type="submit" class="siwg">
-          <img id="siwg-image" alt="Sign in with Google" />
-        </button>
-      </a>
-    <% } %>
+
+  <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Mountain Bike Trails</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" href="/trails">Home</a>
+          <a class="nav-link" href="/trails/new">Upload Trail</a>
+          <a class="nav-link" href="#"><% if (user) { %>
+            <a href="/auth/logout">
+              <button type="submit">Logout</button>
+            </a>
+            <%# google signIn/signOut logic %> 
+          <% } else { %>
+            <a href="/auth/google" class="siwg-link">
+              <button type="submit" class="siwg">
+                <img id="siwg-image" alt="Sign in with Google" />
+              </button>
+            </a>
+          <% } %></a>
+          <!-- <a class="nav-link disabled">Disabled</a> -->
+        </div>
+      </div>
+    </div>
   </nav>
+ 

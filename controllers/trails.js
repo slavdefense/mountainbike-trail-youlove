@@ -28,10 +28,17 @@ function createTrail(req,res){
   //collect form data and put in inside Trail->content
   const trail = new Trail()
   trail.boss = req.user.profile._id
-  console.log(trail.boss)
-  
-  // console.log(req.body.owner)
+  // console.log(trail.boss)
+  console.log(req.body.name)
+  trail.name=req.body.name
+  trail.place= req.body.place
   trail.content=req.body
+  console.log(trail)
+
+  // console.log(req.body.owner)
+  // trail.content=req.body
+  // trail.name=req.body
+  // console.log(trail.name)
   // console.log(trail.content) 
   trail.save()
   .then(()=>res.redirect('/trails'))

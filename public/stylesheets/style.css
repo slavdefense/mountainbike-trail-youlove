@@ -33,12 +33,12 @@ nav {
   justify-content: center;
 }
 
-main {
+/* main {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-}
+} */
 
 h1 {
   font-size: 3.6rem;
@@ -63,10 +63,28 @@ h1 {
 }
 
 a{
-  font-size:20px;
+  font-size:10px;
 }
 
 input{
-  height:100px;
+  height:30px;
+  display:block;
+  margin-left:55px;
 
+}
+
+#display-trails-index{
+  width:800px;
+  height:500px;
+  
+  display:flex;
+  
+  justify-content: space-around;
+  align-items: center;
+}
+
+#trails-individual{
+  background-color: blanchedalmond;
+  width:100px;
+  height:100px;
 }
