@@ -1,5 +1,7 @@
 import { Router } from 'express'
 import multer from 'multer'
+import {storage} from '../cloudinary/index.js'
+const upload = multer({ storage })
 import * as trailCtrl from '../controllers/trails.js'
 import { isLoggedIn } from '../middleware/middleware.js'
 
