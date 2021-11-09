@@ -14,7 +14,7 @@ router.get('/',trailCtrl.index)
 router.get('/new',isLoggedIn,trailCtrl.new)
 
 //creat a new trail @ localhost:3000/trails
-router.post('/',trailCtrl.create)
+router.post('/',upload.single('image'),trailCtrl.create)
 
 //read a specific trail @localhost:3000/trails/:id
 router.get('/:id',trailCtrl.show)
