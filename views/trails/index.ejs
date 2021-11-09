@@ -17,7 +17,7 @@
 
     <% trail.forEach(element => { %>
       <% element.content.forEach(subelement => { %>
-        <div id="trails-individual">
+        <div id="trails-individual"class="card">
           <p><%= subelement.review %> <%= subelement.rating %> </p> <a href="/trails/<%= element._id %> ">details</a>
         </div>
         
