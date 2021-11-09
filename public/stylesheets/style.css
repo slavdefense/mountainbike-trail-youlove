@@ -90,7 +90,7 @@ input{
 }
 
 .container-sm{
-  width:500px;
+  width:700px;
   height:200px;
   background-image: cover;
 
@@ -98,5 +98,19 @@ input{
 }
 
 .container img{
-  width:100%
+  width:100%;
+  
+  margin-left: 280px;
+}
+.form-control{
+  width:500px;
+  margin-bottom: 30px;
+
+}
+
+.info{
+  width:400px;
+  height: 500px;
+  font-size: 15px;
+  margin-top: -180px;
 }

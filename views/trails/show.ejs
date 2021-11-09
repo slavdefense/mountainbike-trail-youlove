@@ -3,25 +3,43 @@
 
 
 <main class="container">
- <h1><%= title %></h1>
- <div class="container-sm"><img src="<%= trail.image %> " alt=""></div>  
+ <h1><%= trail.name %></h1>
+ <div class="container-sm"><img src="<%= trail.image %> " alt="">
+
+</div>  
  
 
- <h1>Trail Title:<%= trail.name %> </h1>
- <h2>Trail place:<%= trail.place %> </h1>
-<% trail.content.forEach(info => { %>
- <h1><%= info.review %> </h1>
- <h1><%= info.rating %> </h1>
- 
- 
-<% }) %>
+  <div class="info">
+    <% trail.content.forEach(info => { %>
+      <!-- <div class="ratings"><%= info.rating %> </div> -->
+      <% if(info.rating===1) {%> 
+          <h1><%= '💠 '%></h1> 
+        <% } %> 
+        <% if(info.rating===2) {%> 
+          <h1><%= '💠💠' %> </h1>
+        <% } %> 
+        <% if(info.rating===3) {%> 
+          <h1><%= '💠💠💠'%></h1> 
+        <% } %> 
+        <% if(info.rating===4) {%> 
+          <h1><%= '💠💠💠💠' %></h1> 
+        <% } %> 
+        <% if(info.rating===5) {%> 
+          <h1><%= '💠💠💠💠💠' %></h1> 
+        <% } %> 
+      <div class="reviews"><%= info.review %> </div class="reviews">
+         
+     <% }) %>
+
+  </div>
 
 
-  <h1>The creater is <%= trail.boss.name %> </h1>
+<h3>Trail place:<%= trail.place %> </h3>
+
+  <h3>Credits <%= trail.boss.name %> </h3>
   
 
-<h1>trail id <%= trail._id %> </h1>
-<h1>edit the trail<a href="/trails/<%= trail._id %>/edit">edit</a> </h1>
+<h3>edit the trail<a href="/trails/<%= trail._id %>/edit">Edit</a> </h3>
 <form action="/trails/<%= trail._id %>?_method=DELETE" method="POST">
   <button method="post">Delete</button>
 </form>
