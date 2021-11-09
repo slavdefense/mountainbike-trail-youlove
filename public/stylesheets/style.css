@@ -88,3 +88,15 @@ input{
   width:100px;
   height:100px;
 }
+
+.container-sm{
+  width:500px;
+  height:200px;
+  background-image: cover;
+
+ 
+}
+
+.container img{
+  width:100%
+}

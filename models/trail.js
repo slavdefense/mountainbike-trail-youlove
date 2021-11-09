@@ -9,6 +9,7 @@ const trailSchema = new mongoose.Schema({
   name: String,
   content: [contentSchema],
   place:String,
+  image:String,
   boss: {type: mongoose.Schema.Types.ObjectId,ref: "Profile"}
   
 }, {

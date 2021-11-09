@@ -29,15 +29,17 @@ function createTrail(req,res){
   const trail = new Trail()
   trail.boss = req.user.profile._id
   // console.log(trail.boss)
-  console.log(req.body.name)
+  console.log(req.body)
+  console.log(req.file.path)
 
-//#######
-  // trail.name=req.body.name
-  // trail.place= req.body.place
-  // trail.content=req.body
-//#######
 
-  console.log(trail)
+   trail.name=req.body.name
+   trail.place= req.body.place
+   trail.content=req.body
+   trail.image=req.file.path
+
+
+  // console.log(trail)
 
   // console.log(req.body.owner)
   // trail.content=req.body
@@ -46,10 +48,9 @@ function createTrail(req,res){
   // console.log(trail.content)
   
   
-  //########
-  // trail.save()
-  // .then(()=>res.redirect('/trails'))
-  //#######
+   trail.save()
+   .then(()=>res.redirect('/trails'))
+  
 
   // console.log(req.body)
 
