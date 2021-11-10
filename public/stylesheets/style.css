@@ -84,19 +84,24 @@ input{
   
 }
 .index-img{
-  width: 30%;
+  width: 20%;
+  margin:calc(10%/6)
   
  
 }
 .index-img img{
   width:100%;
-  height: 100%;
+  height: 300px;
   
 }
 
 #trails-individual{
   background-color: blanchedalmond;
-  margin-left: 100px;
+  /* display:flex;
+  justify-content: center; */
+  height:20px;
+  
+  
 }
 
 .container-sm{
@@ -126,7 +131,7 @@ input{
 }
 
 .place-info{
-  width:200px;
+  width:300px;
   font-size:15px;
 
 
