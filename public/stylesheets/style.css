@@ -114,3 +114,27 @@ input{
   font-size: 15px;
   margin-top: -180px;
 }
+
+.place-info{
+  width:200px;
+  font-size:15px;
+
+
+
+}
+.credit-info{
+width:200px;
+font-size:15px;
+}
+.edit-info a{
+  width:200px;
+  font-size:15px;
+  color:black;
+  }
+
+  .edit-info{
+    width:50px;
+    font-size:15px;
+    padding: 10px;
+    margin: 10px 0 10px 0;
+    }

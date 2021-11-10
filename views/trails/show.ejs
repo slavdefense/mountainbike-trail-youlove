@@ -13,33 +13,33 @@
     <% trail.content.forEach(info => { %>
       <!-- <div class="ratings"><%= info.rating %> </div> -->
       <% if(info.rating===1) {%> 
-          <h1><%= '💠 '%></h1> 
+          <h1><%= '👍'%></h1> 
         <% } %> 
         <% if(info.rating===2) {%> 
-          <h1><%= '💠💠' %> </h1>
+          <h1><%= '👍👍' %> </h1>
         <% } %> 
         <% if(info.rating===3) {%> 
-          <h1><%= '💠💠💠'%></h1> 
+          <h1><%= '👍👍👍'%></h1> 
         <% } %> 
         <% if(info.rating===4) {%> 
-          <h1><%= '💠💠💠💠' %></h1> 
+          <h1><%= '👍👍👍👍' %></h1> 
         <% } %> 
         <% if(info.rating===5) {%> 
-          <h1><%= '💠💠💠💠💠' %></h1> 
+          <h1><%= '👍👍👍👍👍' %></h1> 
         <% } %> 
-      <div class="reviews"><%= info.review %> </div class="reviews">
+      <div class="card p-3 reviews"><%= info.review %> </div class="reviews">
          
      <% }) %>
 
   </div>
 
 
-<h3>Trail place:<%= trail.place %> </h3>
+<div class=" place-info">Location: <%= trail.place %> </div>
 
-  <h3>Credits <%= trail.boss.name %> </h3>
+  <div class=" credit-info">Credits: <%= trail.boss.name %> </div>
   
 
-<h3>edit the trail<a href="/trails/<%= trail._id %>/edit">Edit</a> </h3>
+<div class="card edit-info"><a href="/trails/<%= trail._id %>/edit">Edit</a> </div>
 <form action="/trails/<%= trail._id %>?_method=DELETE" method="POST">
   <button method="post">Delete</button>
 </form>
