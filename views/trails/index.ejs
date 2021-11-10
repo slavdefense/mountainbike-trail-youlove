@@ -19,7 +19,37 @@
       <% element.content.forEach(subelement => { %>
 
         <div id="trails-individual"class="card">
-          <p> <%= subelement.rating %> </p> <a href="/trails/<%= element._id %> ">Details</a>
+
+            <% if( subelement.rating===1) {%> 
+                <p>'🌟'</p>
+
+              <% } %> 
+              <% if(subelement.rating===2) {%> 
+                <p>'🌟🌟'</p>
+
+              <% } %>
+
+              <% if(subelement.rating===3) {%> 
+                <p>'🌟🌟🌟'</p>
+
+              <% } %> 
+
+              <% if( subelement.rating===4) {%> 
+                <p>'🌟🌟🌟🌟'</p>
+
+              <% } %>  
+
+              <% if( subelement.rating ===5) {%> 
+                <p>'🌟🌟🌟🌟🌟'</p>
+
+              <% } %>  
+
+          
+          
+          
+          
+          
+          <a href="/trails/<%= element._id %> ">Details</a>
         </div>
         
         

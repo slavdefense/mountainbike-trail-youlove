@@ -96,12 +96,19 @@ input{
 }
 
 #trails-individual{
-  background-color: blanchedalmond;
+  /* background-color: blanchedalmond; */
+  background-color: black;
   /* display:flex;
   justify-content: center; */
   height:20px;
+  display: flex;  
+  align-items: center;
   
   
+  
+}
+a{
+  color:black
 }
 
 .container-sm{
