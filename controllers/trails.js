@@ -6,7 +6,9 @@ import {Trail} from '../models/trail.js'
 function index(req,res){
   Trail.find({})
   
+  
   .then((trail)=>{
+    console.log(trail)
     
     res.render('trails/index',{trail,title:'All Trails',user:req.user})
     // console.log(trail[0].content[0].review) 
@@ -29,8 +31,8 @@ function createTrail(req,res){
   const trail = new Trail()
   trail.boss = req.user.profile._id
   // console.log(trail.boss)
-  console.log(req.body)
-  console.log(req.file.path)
+  // console.log(req.body)
+  // console.log(req.file.path)
 
 
    trail.name=req.body.name
@@ -60,6 +62,7 @@ function show(req,res){
   // console.log(req.user.profile.name)
   Trail.findById(req.params.id)
   .populate('boss')
+  // .populate('superman')
   .then((trail)=>{
    console.log(trail)
    res.render('trails/show',{trail,title:'Your trail'})
@@ -71,14 +74,14 @@ function edit(req,res){
   
   Trail.findById(req.params.id)
   .then((trail)=>{
-    console.log(trail.boss)
-    console.log(req.user.profile._id)
+    // console.log(trail.boss)
+    // console.log(req.user.profile._id)
     if(trail.boss.equals(req.user.profile._id)){
       res.render('trails/edit',{id:req.params.id,title:'Trail Edit',user:req.user})
     }
     else{
       res.redirect('/trails')
-      console.log('cannot edit others trail')
+      // console.log('cannot edit others trail')
     }
     
   })
@@ -92,7 +95,7 @@ function edit(req,res){
 function fix(req,res){
   // console.log('fixed')
   // console.log(req.body)
-  console.log(req.params.id)
+  // console.log(req.params.id)
 //  Trail.findByIdAndUpdate("6186ffecdaccd9312f9f0481",req.body,{new:true})
 //  .then(()=> res.redirect('/trails'))
 // Trail.findById("6186ffecdaccd9312f9f0481")

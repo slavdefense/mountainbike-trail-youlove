@@ -37,6 +37,17 @@
 <div class=" place-info"><b>Location:</b> <%= trail.place %> </div>
 
   <div class=" credit-info"><b>Credits:</b> <%= trail.boss.name %> </div>
+ 
+  
+
+<form action="/comments" method="POST">
+  <textarea name="comment" id="comment" cols="50" rows="5"></textarea>
+  <label for="comment">Comment</label>
+  <button type="submit">Submit</button>
+</form>
+
+<h1><%= trail.superman %> </h1>
+
   
 <% if(user){ %> 
 

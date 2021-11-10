@@ -10,7 +10,8 @@ const trailSchema = new mongoose.Schema({
   content: [contentSchema],
   place:String,
   image:{type:String,required:false},
-  boss: {type: mongoose.Schema.Types.ObjectId,ref: "Profile"}
+  boss: {type: mongoose.Schema.Types.ObjectId,ref: "Profile"},
+  superman: {type: mongoose.Schema.Types.ObjectId,ref: "Comment"}
   
 }, {
   timestamps: true
