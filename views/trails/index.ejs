@@ -2,7 +2,7 @@
 <%- include('../partials/nav') %>
 
 
-<main class="container">
+<main id="display-trails-index">
  
 <%# all my created trails goes here %> 
   
@@ -10,33 +10,30 @@
  
   <%# This is a link to attach a new picture and comments %> 
    <!-- <a href="/trails/new">Create a new trail</a> -->
-<div id="display-trails-index">
-
-
   
 
     <% trail.forEach(element => { %>
+
+    <div class="index-img" ><img src="<%= element.image %>"       alt="">
+      
       <% element.content.forEach(subelement => { %>
+
         <div id="trails-individual"class="card">
-          <p><%= subelement.review %> <%= subelement.rating %> </p> <a href="/trails/<%= element._id %> ">details</a>
+          <p> <%= subelement.rating %> </p> <a href="/trails/<%= element._id %> ">details</a>
         </div>
         
         
       <% }) %> 
+      
+    </div>
+      
+
+
+      
     <% }) %>
-  
 
   
-
   
-
-  
-
-
-</div>
-  
-
-
 </main>
 
 
