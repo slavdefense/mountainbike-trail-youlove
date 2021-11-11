@@ -1,16 +1,16 @@
-import mongoose from 'mongoose'
+// import mongoose from 'mongoose'
 
 
-const commentSchema = new mongoose.Schema({
-  comment: {type:String,required:true},
-  commentator: String
+// const commentSchema = new mongoose.Schema({
+//   comment: {type:String,required:true},
+//   commentator: String
   
-}, {
-  timestamps: true
-})
+// }, {
+//   timestamps: true
+// })
 
-const Comment = mongoose.model('Comment', commentSchema)
+// const Comment = mongoose.model('Comment', commentSchema)
 
-export {
-  Comment
-}
+// export {
+//   Comment
+// }

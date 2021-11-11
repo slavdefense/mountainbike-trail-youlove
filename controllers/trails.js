@@ -62,7 +62,7 @@ function show(req,res){
   // console.log(req.user.profile.name)
   Trail.findById(req.params.id)
   .populate('boss')
-  // .populate('superman')
+  
   .then((trail)=>{
    console.log(trail)
    res.render('trails/show',{trail,title:'Your trail'})
@@ -148,7 +148,17 @@ function deleteTrails(req,res){
   
 
 // }
+function createComments(req,res){
+  console.log(req.params.id)
+  Trail.findById(req.params.id)
+  .then((trail)=>{
+    trail.superman.push(req.body)
+    trail.save()
+    
+    .then(()=>res.redirect(`/trails/${trail._id}`))
+  })
 
+}
 
 
 export{
@@ -158,6 +168,7 @@ export{
   show,
   edit,
   fix as update,
-  deleteTrails as delete
+  deleteTrails as delete,
+  createComments
 
 }

@@ -32,7 +32,10 @@
      <% }) %>
 
   </div>
-
+<% trail.superman.forEach(element => { %>
+  <div class="comment"><%= element.comment %> </div>
+ 
+<% }) %>
 
 <div class=" place-info"><b>Location:</b> <%= trail.place %> </div>
 
@@ -40,13 +43,18 @@
  
   
 
-<form action="/comments" method="POST">
-  <textarea name="comment" id="comment" cols="50" rows="5"></textarea>
+<form action="/trails/<%= trail._id %>/comments" method="POST">
   <label for="comment">Comment</label>
+  <textarea name="comment" id="comment" cols="50" rows="5" required></textarea>
+  
+
+  <label for="commentator">Nickname</label>
+  <textarea name="commentator" id="" cols="10" rows="2" required></textarea>
+  
   <button type="submit">Submit</button>
 </form>
 
-<h1><%= trail.superman %> </h1>
+
 
   
 <% if(user){ %> 

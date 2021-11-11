@@ -28,6 +28,8 @@ router.patch('/:id',trailCtrl.update)
 //delete a trail @localhost:3000/trails/:id
 router.delete('/:id',isLoggedIn,trailCtrl.delete)
 
+//upload a comment on the show page @localhost:3000/trails/:id/comments
+router.post('/:id/comments',trailCtrl.createComments)
 
 
 
