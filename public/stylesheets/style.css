@@ -134,6 +134,25 @@ a{
   margin-bottom: 30px;
 
 }
+/* name of trail in show page */
+.trail-name{
+  color:white;
+}
+/* location of trail in show page */
+.place-info{
+  width:300px;
+  font-size:20px;
+  color:white;
+  font-weight: bolder;
+
+}
+/* Post Owner */
+.credit-info{
+  width:200px;
+  font-size:20px;
+  font-weight: bolder;
+  color:white;
+  }
 
 .info{
   width:400px;
@@ -142,17 +161,17 @@ a{
   margin-top: -180px;
 }
 
-.place-info{
-  width:300px;
-  font-size:15px;
+/* comment owner */
 
-
-
+#comment-owner{
+  color:red;
+  font-weight: bolder;
 }
-.credit-info{
-width:200px;
-font-size:15px;
+#comment-name{
+  color:red;
+  font-weight: bolder;
 }
+
 .edit-info a{
   width:200px;
   font-size:15px;
@@ -171,3 +190,37 @@ font-size:15px;
     
     background-color: bisque;
   }
+ 
+
+
+/* index view */
+
+#trail-name{
+  color:white;
+  font-weight: bolder;
+  text-decoration: none;
+  font-size: 25px;
+}
+a{
+  text-decoration: none;
+}
+
+#trail-name:hover{
+  color:red
+}
+button:hover{
+  color:red
+}
+
+/* edit page */
+#edit-page{
+  background-image: url("https://images.unsplash.com/photo-1530173235220-f6825c107a77?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80");
+  height:800px;
+ 
+
+}
+
+#content-edit{
+  margin-left:500px;
+  
+}

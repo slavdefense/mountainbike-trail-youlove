@@ -3,7 +3,7 @@
 
 
 <main class="container">
- <h1><%= trail.name %></h1>
+ <h1 class="trail-name"><%= trail.name %></h1>
  <div class="container-sm"><img src="<%= trail.image %> " alt="">
 
 </div>  
@@ -44,11 +44,11 @@
   
 
 <form action="/trails/<%= trail._id %>/comments" method="POST">
-  <label for="comment">Comment</label>
-  <textarea name="comment" id="comment" cols="50" rows="5" required></textarea>
+  <label for="comment"id="comment-owner">Comment</label>
+  <textarea name="comment" id="comment-body" cols="50" rows="5" required></textarea>
   
 
-  <label for="commentator">Nickname</label>
+  <label for="commentator" id="comment-name">Nickname</label>
   <textarea name="commentator" id="" cols="10" rows="2" required></textarea>
   
   <button type="submit">Submit</button>

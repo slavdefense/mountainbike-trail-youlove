@@ -3,25 +3,27 @@
 
 
 
-<main>
+<main class="container" id ="edit-page">
+  <div id="content-edit">
+     
+  <h1 class="credit-info"><%= title %> </h1>
 
-  <h1><%= user.email %> </h1>
-  <h1><%= title %> </h1>
-<h1><%= id %> </h1>
+  <form action="/trails/<%= id %>?_method=PATCH" method="POST">
+    
+  <textarea name="review" id="" cols="50" rows="5" required></textarea>
+  <label id="comment-owner" for="review">Comments</label>
+  <input type="range" min="1" max="5" name="rating">
+  <label id="comment-owner"for="rating">Rating</label>
+  
+  
+  <button type="submit">Submit</button>
+  </form>
 
-<%-  %> 
+
+
+  </div>
+
  
-
-
-
-<form action="/trails/<%= id %>?_method=PATCH" method="POST">
-  <label for="review">Comments</label>
-<textarea name="review" id="" cols="30" rows="10" required></textarea>
-<input type="number" name="rating">
-
-
-<button type="submit">Submit</button>
-</form>
 </main>
 
 
