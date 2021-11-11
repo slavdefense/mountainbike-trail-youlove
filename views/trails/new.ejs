@@ -2,18 +2,18 @@
 <%- include('../partials/nav') %>
 
 <main class="container">
-  <h1><%= title %> <a><%= user.profile.name %></a>  </h1>
+  <h1 class="trail-name" ><%= title %> <a><%= user.profile.name %></a>  </h1>
   <%# The created comment needs to be posted 
 in the index vies %> 
 
 <form action="/trails" method="POST" enctype="multipart/form-data">
-  <label class="form-label" for="review">Review</label>
+  <label id="comment-name" class="form-label" for="review">Review</label>
 <textarea class="form-control" name="review" id="" cols="10" rows="10" required></textarea>
-<label class="form-label" for="rating">Rating</label>
+<label id="comment-name" class="form-label" for="rating">Rating</label>
 <input type="range" min="1" max="5" name="rating">
-<label for="name">Name</label>
+<label id="comment-name" for="name">Trail's Name</label>
 <input type="text" name="name">
-<label for="place">Location</label>
+<label id="comment-name" for="place">Location</label>
 <input type="text" name="place">
 <input type="file" name="image">
 

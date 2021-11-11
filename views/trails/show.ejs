@@ -4,9 +4,14 @@
 
 <main class="container">
  <h1 class="trail-name"><%= trail.name %></h1>
+ 
+ <div class=" place-info"><b>Location:</b> <%= trail.place %> </div>
+
+  <div class=" credit-info"><b>Credits:</b> <%= trail.boss.name %> </div>
  <div class="container-sm"><img src="<%= trail.image %> " alt="">
 
-</div>  
+ </div>
+  
  
 
   <div class="info">
@@ -33,15 +38,9 @@
 
   </div>
 <% trail.superman.forEach(element => { %>
-  <div class="comment"><%= element.comment %> </div>
+  <div class="card"  id="comment-owner-each"><%= element.comment %>- <%= element.commentator %>  </div>
  
 <% }) %>
-
-<div class=" place-info"><b>Location:</b> <%= trail.place %> </div>
-
-  <div class=" credit-info"><b>Credits:</b> <%= trail.boss.name %> </div>
- 
-  
 
 <form action="/trails/<%= trail._id %>/comments" method="POST">
   <label for="comment"id="comment-owner">Comment</label>
@@ -54,9 +53,6 @@
   <button type="submit">Submit</button>
 </form>
 
-
-
-  
 <% if(user){ %> 
 
 <% if(trail.boss.equals(user.profile._id)){%>
@@ -68,6 +64,7 @@
 <%} %> 
 
 <% }%>
+
 </main>
 
 

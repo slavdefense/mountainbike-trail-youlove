@@ -164,13 +164,30 @@ a{
 /* comment owner */
 
 #comment-owner{
-  color:red;
+  color:white;
   font-weight: bolder;
+  font-size:15px;
+  
+}
+#comment-owner-each{
+  
+  margin-bottom:30px;
+  color:white;
+  font-size: 17px;
+  background-color:grey;
+  width:300px;
+  padding:5px;
 }
 #comment-name{
-  color:red;
+  color:white;
   font-weight: bolder;
+  font-size: 15px;
 }
+/* #comment-body{
+  color:white;
+  font-weight:bolder;
+  font-size: 15px;
+} */
 
 .edit-info a{
   width:200px;
@@ -187,6 +204,7 @@ a{
    /* trail comments */
   .comment{
     width:300px;
+    color :red;
     
     background-color: bisque;
   }
