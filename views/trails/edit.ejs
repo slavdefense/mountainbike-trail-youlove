@@ -2,33 +2,20 @@
 <%- include('../partials/nav') %>
 
 
-
+<%# Need to create a form that can update the review body and the ratings only %> 
 <main class="container" id ="edit-page">
   <div id="content-edit">
      
-  <h1 class="credit-info"><%= title %> </h1>
+    <h1 class="credit-info"><%= title %> </h1>
 
-  <form action="/trails/<%= id %>?_method=PATCH" method="POST">
-    
-  <textarea name="review" id="" cols="50" rows="5" required></textarea>
-  <label id="comment-owner" for="review">Comments</label>
-  <input type="range" min="1" max="5" name="rating">
-  <label id="comment-owner"for="rating">Rating</label>
-  
-  
-  <button type="submit">Submit</button>
-  </form>
-
-
-
+      <form action="/trails/<%= id %>?_method=PATCH" method="POST">
+        <textarea name="review" id="" cols="50" rows="5" required></textarea>
+          <label id="comment-owner" for="review">Comments</label>
+        <input type="range" min="1" max="5" name="rating">
+          <label id="comment-owner"for="rating">Rating</label>
+      <button type="submit">Submit</button>
+      </form>
   </div>
-
- 
 </main>
-
-
-
-
-
 
 <%- include('../partials/footer') %>

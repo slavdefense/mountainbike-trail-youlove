@@ -1,21 +1,13 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
 
-
 <main id="display-trails-index">
  
-<%# all my created trails goes here %> 
-  
-  <%# This is my comment box %> 
- 
-  <%# This is a link to attach a new picture and comments %> 
-   <!-- <a href="/trails/new">Create a new trail</a> -->
-  
-
     <% trail.forEach(element => { %>
-
+    <%# All my created trails goes here with an image  %> 
     <div class="index-img" ><img src="<%= element.image %>"       alt="">
       
+      <%# All my ratings for the trail goes here %> 
       <% element.content.forEach(subelement => { %>
 
         <div id="trails-individual"class="card">
@@ -43,12 +35,7 @@
                 <p>'🌟🌟🌟🌟🌟'</p>
 
               <% } %>  
-
-          
-          
-          
-          
-          
+              <%# all my links to the individual trails goes here %> 
           <a href="/trails/<%= element._id %> "><h3 id="trail-name"><%= element.name %> </h3></a>
         </div>
         
@@ -56,14 +43,9 @@
       <% }) %> 
       
     </div>
-      
-
-
-      
+       
     <% }) %>
 
-  
-  
 </main>
 
 
