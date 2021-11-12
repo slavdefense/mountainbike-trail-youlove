@@ -16,6 +16,26 @@ In the initial planning phase, the design looks like this.
 ![Getting Started](/img/ERD.png)
 
 
+<h3>Screenshots of app/homepage</h3>
+<p>Homescreen PC</p>
+
+![Getting Started](/img/app-screenshot1.png)
+
+<h3>Screenshots of app/showview</h3>
+<p>Homescreen PC</p>
+
+![Getting Started](/img/show-view.png)
+
+<h3>Screenshots of app/imageupload</h3>
+<p>Homescreen PC</p>
+
+![Getting Started](/img/upload-page.png)
+
+<h3>Screenshots of app/imageupload</h3>
+<p>Homescreen PC</p>
+
+![Getting Started](/img/trail-edit.png)
+
 <h3>List of technologies</h3>
 <li> HTML</li>
 <li>Css </li>
@@ -27,11 +47,14 @@ In the initial planning phase, the design looks like this.
 <li>Multer</li>
 <li>Cloudinary</li>
 <li>Passport</li>
-<li>morgan</li>
 <li> Whimsical Wireframes</li>
 
 
 <h3>Future Deployments</h3>
 
-<li>Create comments on reviews</li>
-<li>Create a google map for the loction</li>
+
+<li>Display the location on  a map </li>
+<li>Multiple photo uploads</li>
+
+<h3>Credits</h3>
+I would like to thank https://unsplash.com/ for the copyright free images.
