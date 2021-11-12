@@ -234,8 +234,8 @@ button:hover{
 /* edit page */
 #edit-page{
   background-image: url("https://images.unsplash.com/photo-1530173235220-f6825c107a77?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80");
-  /* background-image: url("https://images.unsplash.com/photo-1534175507998-e5477e27c2c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80");
-  height:800px; */
+  
+  height:800px;
  
 
 }
