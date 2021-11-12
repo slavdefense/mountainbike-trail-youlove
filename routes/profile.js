@@ -3,9 +3,6 @@ import * as profileCtrl from '../controllers/profile.js'
 const router = Router()
 
 
-
-
-
 function isLoggedIn(req,res,next){
   if(req.isAuthenticated()){
     return next()

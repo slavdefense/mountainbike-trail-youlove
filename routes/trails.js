@@ -13,7 +13,8 @@ router.get('/',trailCtrl.index)
 //render a new trail page @ localhost:3000/trails/new
 router.get('/new',isLoggedIn,trailCtrl.new)
 
-//creat a new trail @ localhost:3000/trails
+//creat a new trail @ localhost:3000/trails 
+//allow users to only upload a single file to limit uploads. large amount of uploads required paid subsription
 router.post('/',upload.single('image'),trailCtrl.create)
 
 //read a specific trail @localhost:3000/trails/:id
@@ -30,13 +31,6 @@ router.delete('/:id',isLoggedIn,trailCtrl.delete)
 
 //upload a comment on the show page @localhost:3000/trails/:id/comments
 router.post('/:id/comments',trailCtrl.createComments)
-
-
-
-
-
-
-
 
 export {
   router
