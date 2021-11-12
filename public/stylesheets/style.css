@@ -38,12 +38,7 @@ nav {
   justify-content: center;
 }
 
-/* main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-} */
+
 
 h1 {
   font-size: 3.6rem;
@@ -120,7 +115,8 @@ a{
   width:700px;
   height:200px;
   background-image: cover;
-
+  margin-left: 500px;
+  
  
 }
 
@@ -128,6 +124,7 @@ a{
   width:100%;
   
   margin-left: 280px;
+  margin-top: -80px;
 }
 .form-control{
   width:500px;
@@ -137,6 +134,10 @@ a{
 /* name of trail in show page */
 .trail-name{
   color:white;
+  margin-left:0 auto;
+}
+.black{
+  margin-left:50px;
 }
 /* location of trail in show page */
 .place-info{
@@ -233,7 +234,8 @@ button:hover{
 /* edit page */
 #edit-page{
   background-image: url("https://images.unsplash.com/photo-1530173235220-f6825c107a77?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80");
-  height:800px;
+  /* background-image: url("https://images.unsplash.com/photo-1534175507998-e5477e27c2c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80");
+  height:800px; */
  
 
 }
@@ -243,7 +245,12 @@ button:hover{
   margin-bottom: 10px;
   
 }
-
+@media screen and (max-width:1392px) {
+  #trail-name{
+    font-size: 18px;
+  }
+  
+}
 
 @media screen and (max-width:900px) {
   .index-img{
@@ -342,6 +349,11 @@ button:hover{
   }
   #trails-individual{
     margin-top: -20px;
+  }
+
+ 
+  body{
+    background-image: url("https://images.unsplash.com/photo-1534175507998-e5477e27c2c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80");
   }
   
 }
