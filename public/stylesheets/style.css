@@ -240,5 +240,108 @@ button:hover{
 
 #content-edit{
   margin-left:500px;
+  margin-bottom: 10px;
+  
+}
+
+
+@media screen and (max-width:900px) {
+  .index-img{
+    height:200px;
+    margin:20px;
+  }
+  #trail-name{
+    font-size: 10px;
+    margin-top: -120px;
+  }
+  #trails-individual{
+    margin-top: -80px;
+  }
+  
+}
+
+@media screen and (max-width:800px) {
+  .index-img{
+    height:200px;
+    width: 200px;
+    margin:20px;
+  }
+  #trail-name{
+    font-size: 10px;
+    margin-top: -120px;
+  }
+  #trails-individual{
+    margin-top: -80px;
+  }
+  
+}
+
+@media screen and (max-width:600px) {
+  .index-img{
+    height:100px;
+    margin:20px;
+  }
+  #trail-name{
+    font-size: 10px;
+    margin-top: -120px;
+  }
+  #trails-individual{
+    margin-top: -180px;
+  }
+  
+}
+
+@media screen and (max-width:500px) {
+  .index-img{
+    height:150px;
+    width:350px;
+    margin:20px;
+  }
+  #trail-name{
+    font-size: 10px;
+    margin-top: -120px;
+  }
+  #trails-individual{
+    margin-top: -120px;
+  }
+  
+}
+
+
+
+
+@media screen and (max-width:400px) {
+  .index-img{
+    height:60px;
+    width:150px;
+    margin:20px;
+    background-size: cover;
+  }
+  #trail-name{
+    font-size: 10px;
+    margin-top: -70px;
+  }
+  #trails-individual{
+    margin-top: -200px;
+  }
+  
+}
+@media screen and (max-width:370px) {
+  .index-img{
+    height:260px;
+    width:250px;
+    margin:20px;
+    background-size: cover;
+    border:1px solid black;
+    border-radius: 10%;
+    margin-bottom: 20px;
+  }
+  #trail-name{
+    font-size: 10px;
+    margin-top: -70px;
+  }
+  #trails-individual{
+    margin-top: -20px;
+  }
   
 }
