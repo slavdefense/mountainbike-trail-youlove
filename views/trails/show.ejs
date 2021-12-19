@@ -2,37 +2,40 @@
 <%- include('../partials/nav') %>
 
 
-<main class="container black">
+<main class="container ">
   <%# Display trail name %> 
- <h1 class="trail-name"><%= trail.name %></h1>
- <%# Displat trail location %> 
- <div class=" place-info"><b>Location:</b> <%= trail.place %> </div>
-<%# Display trail creator %> 
- <div class=" credit-info"><b>Credits:</b> <%= trail.boss.name %> </div>
- <%# Display uploaded image %> 
+
+  <div class="trail-info-show">
+    <h1 class="trail-name"><%= trail.name %></h1>
+    <%# Displat trail location %> 
+    <div class=" place-info"><b>Location:</b> <%= trail.place %> </div>
+   <%# Display trail creator %> 
+    <div class=" credit-info"><b>Credits:</b> <%= trail.boss.name %> </div>
+    <%# Display uploaded image %> 
+  </div>
+
+
  <div class="container-sm"><img src="<%= trail.image %> " alt="">
 
  </div>
-  
- 
 <%# Iterate the trail content, assign a star symbol to each ratings 1,2,3,4,5 with corresponding stars %> 
   <div class="info">
     <% trail.content.forEach(info => { %>
      
       <% if(info.rating===1) {%> 
-          <h1><%= '🌟'%></h1> 
+          <h1><%= '⭐'%></h1> 
         <% } %> 
         <% if(info.rating===2) {%> 
-          <h1><%= '🌟🌟' %> </h1>
+          <h1><%= '⭐⭐' %> </h1>
         <% } %> 
         <% if(info.rating===3) {%> 
-          <h1><%= '🌟🌟🌟'%></h1> 
+          <h1><%= '⭐⭐⭐'%></h1> 
         <% } %> 
         <% if(info.rating===4) {%> 
-          <h1><%= '🌟🌟🌟🌟' %></h1> 
+          <h1><%= '⭐⭐⭐⭐' %></h1> 
         <% } %> 
         <% if(info.rating===5) {%> 
-          <h1><%= '🌟🌟🌟🌟🌟' %></h1> 
+          <h1><%= '⭐⭐⭐⭐⭐' %></h1> 
         <% } %> 
       <div class="card p-3 reviews"><%= info.review %> </div class="reviews">
          
@@ -46,22 +49,32 @@
 <% }) %>
 
 <%# Display a form to post a comment %> 
-<form action="/trails/<%= trail._id %>/comments" method="POST">
-  <label for="comment"id="comment-owner">Comment</label>
-  <textarea name="comment" id="comment-body" cols="50" rows="5" required></textarea>
-  <label for="commentator" id="comment-name">Nickname</label>
-  <textarea name="commentator" id="" cols="10" rows="2" required></textarea>
-  <button type="submit">Submit</button>
-</form>
+<div class="form-div-comment">
+  <form action="/trails/<%= trail._id %>/comments" method="POST">
+    
+    <label for="comment"id="comment-owner">Comment</label>
+    <textarea placeholder="Write a Comment" name="comment" id="comment-body" cols="50" rows="5" required></textarea>
+    <label for="commentator" id="comment-name">Nickname</label>
+    <textarea placeholder="Your nickname" name="commentator" id="" cols="20" rows="2" required></textarea>
+    <button class="submit-btn" type="submit">Submit</button>
+  </form>
+
+</div>
+
+ 
+
+
+</div>
+
 
 <%# Allow only post owners to edit or delete a post %> 
 <%#only display edit and delete functionality if the user who created the post is the user who is logged in %> 
 <% if(user){ %> 
 
     <% if(trail.boss.equals(user.profile._id)){%>
-      <div class="card edit-info"><a href="/trails/<%= trail._id %>/edit">Edit</a> </div>
+      <div class="card-edit-info"><a href="/trails/<%= trail._id %>/edit">Edit</a> </div>
         <form action="/trails/<%= trail._id %>?_method=DELETE" method="POST">
-          <button method="post">Delete</button>
+          <button class="delete-btn" method="post">Delete</button>
         </form>
       
     <%} %> 

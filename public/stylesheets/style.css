@@ -40,6 +40,7 @@ nav {
   height: 7em;
   position: fixed;
   
+  
 }
 
 .nav-span-link{
@@ -54,6 +55,17 @@ nav {
   background-color:#34a0a4;
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.container-fluid{
+  
+  width: 100%;
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 button{
@@ -139,18 +151,12 @@ input{
 }
 
 #trails-individual{
-  /* background-color: blanchedalmond; */
-  background-color: black;
-  /* display:flex;
-  justify-content: center; */
-  height:30px;
- 
-  display: flex;  
-  align-items: center;
-  
-  
-  
+ background-color: black;
+ height:30px;
+ display: flex;  
+ align-items: center;
 }
+
 a{
   color:black
 }
@@ -159,38 +165,52 @@ a{
   width:700px;
   height:200px;
   background-image: cover;
-  margin-left: 500px;
-  
- 
+  margin-left: 30em;
+ margin-top: -49px;
+  position: fixed;
+  z-index: 100;
 }
 
 .container img{
   width:100%;
-  
   margin-left: 280px;
   margin-top: -80px;
 }
+
 .form-control{
   width:500px;
   margin-bottom: 30px;
-
 }
+
 /* name of trail in show page */
 .trail-name{
   color:white;
   margin-left:0 auto;
 }
+
 .black{
   margin-left:50px;
 }
+
+.trail-info-show{
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 7em;
+  width:50em;
+}
+
+
+
 /* location of trail in show page */
+
 .place-info{
   width:300px;
   font-size:20px;
   color:white;
   font-weight: bolder;
-
 }
+
 /* Post Owner */
 .credit-info{
   width:200px;
@@ -201,9 +221,37 @@ a{
 
 .info{
   width:400px;
-  height: 500px;
   font-size: 15px;
-  margin-top: -180px;
+}
+
+.form-div-comment>textarea,label,button{
+  display: block;
+}
+
+.submit-btn{
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 800;
+  background-color:#80ffdb ;
+}
+
+.delete-btn{
+  background-color: #ba181b;
+  display: block;
+  
+  border-radius: 1px !important;
+
+}
+
+.card-edit-info{
+  display: flex;
+  width:10em;
+}
+
+/* form div comment */
+.form-div-comment{
+  display:flex;
+  flex-direction: column;
 }
 
 /* comment owner */
@@ -228,11 +276,6 @@ a{
   font-weight: bolder;
   font-size: 15px;
 }
-/* #comment-body{
-  color:white;
-  font-weight:bolder;
-  font-size: 15px;
-} */
 
 .edit-info a{
   width:200px;
@@ -246,7 +289,7 @@ a{
     padding: 10px;
     margin: 10px 0 10px 0;
     }
-   /* trail comments */
+  
   .comment{
     width:300px;
     color :red;
@@ -254,6 +297,16 @@ a{
     background-color: bisque;
   }
  
+  .card-edit-info{
+    width:5em;
+    height:2em;
+    background-color: #ff4d6d;
+    padding: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+  }
 
 
 /* index view */
@@ -289,19 +342,22 @@ button:hover{
   margin-bottom: 10px;
   
 }
-
-
-
 .copyright{
   width:300px;
   height: 100px;
   position: fixed;
-  bottom: 0;
+  bottom: -4.5em;
  left: 43.5%;
  display: flex;
  color: white;
 
 }
+
+
+
+
+
+
 @media screen and (max-width:1392px) {
   #trail-name{
     font-size: 18px;
