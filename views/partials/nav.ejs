@@ -6,17 +6,17 @@
 
   <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Mountain Bike Trails</a>
+      <a class="navbar-brand" href="#"> <span class="nav-span-link">Mountain Bike Trails</span></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-link active" aria-current="page" href="/trails">Home</a>
-          <a class="nav-link" href="/trails/new">Upload Trail</a>
+          <a class="nav-link active" aria-current="page" href="/trails"><span class="nav-span-link">Home</span></a>
+          <a class="nav-link" href="/trails/new"><span class="nav-span-link">Upload Trail</span></a>
           <a class="nav-link" href="#"><% if (user) { %>
             <a href="/auth/logout">
-              <button type="submit">Logout</button>
+              <button type="submit"><span class="nav-span-link">Logout</span></button>
             </a>
             <%# google signIn/signOut logic %> 
           <% } else { %>
