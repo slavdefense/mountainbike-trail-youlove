@@ -2,24 +2,23 @@
 <%- include('../partials/nav') %>
 
 <main class="container">
-  <%# displa a form to create a new trail %> 
+  <%# display a form to create a new trail %> 
   <h1 class="trail-name" ><%= title %> <a><%= user.profile.name %></a>  </h1>
   <%# Use 'enctype' to make sure that the form can send files request to the server %> 
 
       <form action="/trails" method="POST" enctype="multipart/form-data">
-        <label id="comment-name" class="form-label" for="review">Review</label>
+        <label id="comment-name" class="form-label" for="review"><span class="add-trail-span-info">Review</span></label>
           <textarea class="form-control" name="review" id="" cols="10" rows="10" required></textarea>
-        <label id="comment-name" class="form-label" for="rating">Rating</label>
+        <label id="comment-name" class="form-label" for="rating"> <span class="add-trail-span-info">Rating</span></label>
           <input type="range" min="1" max="5" name="rating">
-        <label id="comment-name" for="name">Trail's Name</label>
+        <label id="comment-name" for="name"> <span class="add-trail-span-info">Trail's Name</span></label>
           <input type="text" name="name">
-        <label id="comment-name" for="place">Location</label>
+        <label id="comment-name" for="place"> <span class="add-trail-span-info">Location</span></label>
           <input type="text" name="place">
 
           <%# Specify the file is an input  %> 
           <input type="file" name="image">
-
-              <button type="submit">Submit</button>
+              <button class="submit-new-trail-btn" type="submit">Submit</button>
       </form>
 
 </main>

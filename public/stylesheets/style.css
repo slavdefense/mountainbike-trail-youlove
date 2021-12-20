@@ -20,27 +20,20 @@ html {
 
 body {
   background-color: gray;
-  /* background-image: url("https://images.unsplash.com/photo-1558481795-7f0a7c906f5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1796&q=80"); */
   background-image: url("https://images.unsplash.com/photo-1581291184976-f565a4574764?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1740&q=80");
 
 
   /* Use a system font, if none are available use an available sans-sarif font */
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
         Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  margin: 0;
-  
+  margin: 0;  
 }
 
 nav {
   background-color: white;
   font-size: 1.6rem;
-  /* display: flex;
-  justify-content: space-around;
-  align-items: center; */
   height: 7em;
-  position: fixed;
-  
-  
+  position: fixed; 
 }
 
 .nav-span-link{
@@ -48,26 +41,39 @@ nav {
   margin-right: 2em;
   margin-left: .7em;
   color:white;
+  border-radius: 0px;
+  justify-content: space-evenly;
+  align-items: center;
  
+}
+.logout-btn{
+  border-radius: 0;
+  display: flex;
+  padding-left: 45px;
+  right:25px;
+  position: absolute;
+  
+  
+  
 }
 
 .navbar>.container-fluid{
-  background-color:#34a0a4;
+  background-color:#606c38;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   height: 100%;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-left: 2px;
+  margin-right: 2px;
 }
 
 .container-fluid{
-  
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 button{
   display: flex;
   justify-content: center;
@@ -77,17 +83,16 @@ button{
   padding-left: 15px;
   
 }
-/* .siwg-link{
-  width:60px;
-  height:50px;
-  border: 3px solid black;
-  margin-top: 20px;
-}
 
-.swig{
-  width: 100px;
-  height: 100px;
-} */
+.submit-new-trail-btn{
+  background-color:#007f5f ;
+  border-radius: 0px;
+  font-size: 20px;
+  color: goldenrod;
+}
+.add-trail-span-info{
+  font-size: 25px; 
+}
 
 #siwg-image{
   width: 100%;
@@ -98,13 +103,11 @@ h1 {
   font-size: 3.6rem;
 }
 
-
 #background-image{
   background-image: url("https://images.unsplash.com/photo-1604677657548-4ced0c4f40c6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1131&q=80");
   width:80%;
   height:700px;
   background-size: cover;
-
   color:red;
 }
 
@@ -113,7 +116,6 @@ h1 {
   width:200px;
   background-image: url("https://images.unsplash.com/photo-1440186347098-386b7459ad6b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80");
   background-size: cover;
-
 }
 
 a{
@@ -124,30 +126,25 @@ input{
   height:30px;
   display:block;
   margin-left:55px;
-
 }
 
 #display-trails-index{
   width:100vw;
   height:500px;
-  
   display:flex;
   flex-wrap: wrap;
-  
   justify-content: space-evenly;
-  
 }
+
 .index-img{
   width: 35%;
   margin:calc(10%/2);
   border: 4px goldenrod double;
-  
- 
 }
+
 .index-img img{
   width:100%;
   height: 440px;
-  
 }
 
 #trails-individual{
@@ -166,7 +163,7 @@ a{
   height:200px;
   background-image: cover;
   margin-left: 30em;
- margin-top: -49px;
+  margin-top: -49px;
   position: fixed;
   z-index: 100;
 }
@@ -186,6 +183,7 @@ a{
 .trail-name{
   color:white;
   margin-left:0 auto;
+  margin-top: 2em;
 }
 
 .black{
@@ -199,8 +197,6 @@ a{
   margin-top: 7em;
   width:50em;
 }
-
-
 
 /* location of trail in show page */
 
@@ -260,10 +256,9 @@ a{
   color:white;
   font-weight: bolder;
   font-size:15px;
-  
 }
+
 #comment-owner-each{
-  
   margin-bottom:30px;
   color:white;
   font-size: 17px;
@@ -271,6 +266,7 @@ a{
   width:300px;
   padding:5px;
 }
+
 #comment-name{
   color:white;
   font-weight: bolder;
@@ -293,7 +289,6 @@ a{
   .comment{
     width:300px;
     color :red;
-    
     background-color: bisque;
   }
  
@@ -317,6 +312,7 @@ a{
   text-decoration: none;
   font-size: 25px;
 }
+
 a{
   text-decoration: none;
 }
@@ -324,6 +320,7 @@ a{
 #trail-name:hover{
   color:red
 }
+
 button:hover{
   color:red
 }
@@ -331,10 +328,7 @@ button:hover{
 /* edit page */
 #edit-page{
   background-image: url("https://images.unsplash.com/photo-1530173235220-f6825c107a77?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80");
-  
   height:800px;
- 
-
 }
 
 #content-edit{
@@ -352,10 +346,6 @@ button:hover{
  color: white;
 
 }
-
-
-
-
 
 
 @media screen and (max-width:1392px) {
@@ -377,7 +367,6 @@ button:hover{
   #trails-individual{
     margin-top: -80px;
   }
-  
 }
 
 @media screen and (max-width:800px) {
@@ -386,14 +375,15 @@ button:hover{
     width: 200px;
     margin:20px;
   }
+
   #trail-name{
     font-size: 10px;
     margin-top: -120px;
   }
+
   #trails-individual{
     margin-top: -80px;
   }
-  
 }
 
 @media screen and (max-width:600px) {
@@ -401,14 +391,15 @@ button:hover{
     height:100px;
     margin:20px;
   }
+
   #trail-name{
     font-size: 10px;
     margin-top: -120px;
   }
+
   #trails-individual{
     margin-top: -180px;
   }
-  
 }
 
 @media screen and (max-width:500px) {
@@ -417,18 +408,17 @@ button:hover{
     width:350px;
     margin:20px;
   }
+
   #trail-name{
     font-size: 10px;
     margin-top: -120px;
   }
+
   #trails-individual{
     margin-top: -120px;
   }
   
 }
-
-
-
 
 @media screen and (max-width:400px) {
   .index-img{
@@ -437,15 +427,18 @@ button:hover{
     margin:20px;
     background-size: cover;
   }
+
   #trail-name{
     font-size: 10px;
     margin-top: -70px;
   }
+
   #trails-individual{
     margin-top: -200px;
   }
   
 }
+
 @media screen and (max-width:370px) {
   .index-img{
     height:260px;
@@ -456,10 +449,12 @@ button:hover{
     border-radius: 10%;
     margin-bottom: 20px;
   }
+
   #trail-name{
     font-size: 10px;
     margin-top: -70px;
   }
+
   #trails-individual{
     margin-top: -20px;
   }

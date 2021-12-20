@@ -9,16 +9,18 @@
   /* border:3px solid rgb(24, 226, 118); */
   border-radius: 3px;
   background-size: cover;
+  right:30px;
+  position: absolute;
 }
 
 
 .siwg::before{
-  content: 'Sign in GoogleBike';
+  content: 'GoogleBike Sign-In';
   width: 100px;
   height: 100px;
   font-size: larger;
   font-weight: 900;
-  color: white;
+  color: goldenrod;
 }
 
 .siwg-link {
