@@ -368,12 +368,34 @@ button:hover{
     margin-top: -80px;
   }
 }
+@media screen and (max-width:1180px) {
+  /* .index-img{
+    height:200px;
+    margin:20px;
+  }
+  #trail-name{
+    font-size: 10px;
+    margin-top: -120px;
+  }
+  #trails-individual{
+    margin-top: -80px;
+  } */
+  .nav-span-link{
+    font-size: 30px;
+  }
+}
 
-@media screen and (max-width:800px) {
+@media screen and (max-width:1000px) {
   .index-img{
     height:200px;
     width: 200px;
     margin:20px;
+  }
+  .logout-btn{
+    position: absolute;
+    top:20px;
+    right: 60px;
+    font-size: 15px;
   }
 
   #trail-name{
